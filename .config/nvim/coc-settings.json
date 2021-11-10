@@ -16,7 +16,22 @@
         "hs",
         "lhs",
         "haskell"
-      ]
+      ],
+      "initializationOptions": {
+        "languageServerHaskell": {
+          "formattingProvider": "stylish-haskell",
+          "hlintOn": true,
+          "maxNumberOfProblems": 10,
+          "completionSnippetsOn": true
+        }
+      }
+    },
+    "go": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "trace.server": "verbose",
+      "filetypes": ["go"]
     }
   }
 }
+
