@@ -8,7 +8,7 @@ set -gx PATH ~/.local/bin $PATH
 set -gx PATH ~/.cargo/bin $PATH
 
 pyenv init - | source
-pyenv virtualenv-init - | source
+status --is-interactive; and pyenv virtualenv-init - | source
 set -g fish_user_paths "/opt/homebrew/opt/libpq/bin" $fish_user_paths
 set -g fish_user_paths "/opt/homebrew/opt/openssl@1.1/bin" $fish_user_paths
 direnv hook fish | source
@@ -18,4 +18,6 @@ theme_gruvbox dark soft
 set -g fish_user_paths "/opt/homebrew/opt/m4/bin" $fish_user_paths
 set -g fish_user_paths "/opt/homebrew/opt/llvm/bin" $fish_user_paths
 set -g fish_user_paths "/opt/homebrew/opt/sphinx-doc/bin" $fish_user_paths
-set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /Users/andrey/.ghcup/bin $PATH # ghcup-env
+#set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /Users/andrey/.ghcup/bin $PATH # ghcup-env
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH /Users/wself/.ghcup/bin # ghcup-env
+fish_add_path /opt/homebrew/opt/llvm/bin

@@ -18,3 +18,4 @@ theme_gruvbox dark soft
 set -g fish_user_paths "/opt/homebrew/opt/m4/bin" $fish_user_paths
 set -g fish_user_paths "/opt/homebrew/opt/llvm/bin" $fish_user_paths
 set -g fish_user_paths "/opt/homebrew/opt/sphinx-doc/bin" $fish_user_paths
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin /Users/andrey/.ghcup/bin $PATH # ghcup-env

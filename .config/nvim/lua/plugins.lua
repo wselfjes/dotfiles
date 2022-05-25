@@ -19,7 +19,7 @@ return require('packer').startup(function()
   -- use 'hrsh7th/vim-vsnip'
 
   -- themes
-  use 'eddyekofo94/gruvbox-flat.nvim'
+  use { "ellisonleao/gruvbox.nvim" }
 
   -- tree
   use {
